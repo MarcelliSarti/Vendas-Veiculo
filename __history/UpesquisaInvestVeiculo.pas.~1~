@@ -1,0 +1,24 @@
+unit UpesquisaInvestVeiculo;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+
+type
+  TFRMpesquisaInvestidorVeiculo = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FRMpesquisaInvestidorVeiculo: TFRMpesquisaInvestidorVeiculo;
+
+implementation
+
+{$R *.dfm}
+
+end.

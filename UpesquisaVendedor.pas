@@ -1,0 +1,74 @@
+unit UpesquisaVendedor;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
+  Vcl.ExtCtrls, Vcl.DBCtrls, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
+  Vcl.Grids, Vcl.DBGrids, Vcl.Buttons, Vcl.StdCtrls;
+
+type
+  TFRMpesquisaVendedor = class(TForm)
+    Label1: TLabel;
+    EDTpesquisa: TEdit;
+    BTNPesquisa: TSpeedButton;
+    DBGrid1: TDBGrid;
+    qryPesquisa: TFDQuery;
+    qryPesquisaEmail: TStringField;
+    qryPesquisaCodVend: TFDAutoIncField;
+    qryPesquisaEndereco: TStringField;
+    qryPesquisaNumCnh: TStringField;
+    qryPesquisaCEP: TStringField;
+    qryPesquisaNome: TStringField;
+    qryPesquisaCPF: TStringField;
+    qryPesquisaRG: TStringField;
+    qryPesquisaDataNasc: TDateField;
+    qryPesquisaCodCidade: TIntegerField;
+    dsPesquisa: TDataSource;
+    DBNavigator1: TDBNavigator;
+    procedure EDTpesquisaChange(Sender: TObject);
+    procedure BTNPesquisaClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FRMpesquisaVendedor: TFRMpesquisaVendedor;
+
+implementation
+
+{$R *.dfm}
+
+uses Umodulo, UcadVendedor;
+
+procedure TFRMpesquisaVendedor.BTNPesquisaClick(Sender: TObject);
+begin
+FRMcadVendedor.FDQueryVendedor.Locate('CodVend',QryPesquisa.FieldValues['CodVend'],[]);
+close;
+end;
+
+procedure TFRMpesquisaVendedor.EDTpesquisaChange(Sender: TObject);
+begin
+if EDTpesquisa.text <> ' ' then
+Begin
+  QryPesquisa.SQL.Clear;
+  QryPesquisa.Close;
+  QryPesquisa.SQL.Add('select * from Vendedor');
+  QryPesquisa.SQL.Add('where nome like' + QuotedStr('%' + EDTpesquisa.Text+'%'));
+  QryPesquisa.Open;
+  end
+  else
+  begin
+  QryPesquisa.SQL.Clear;
+  QryPesquisa.Close;
+  QryPesquisa.SQL.Add('select * from Vendedor');
+  QryPesquisa.Open;
+End;
+end;
+
+end.

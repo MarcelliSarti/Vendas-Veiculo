@@ -1,0 +1,78 @@
+unit UcadProduto;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.DBCtrls,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
+  FireDAC.Stan.Async, FireDAC.DApt, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
+  Vcl.Mask, FireDAC.Comp.Client, FireDAC.Comp.DataSet;
+
+type
+  TFRMcadProduto = class(TForm)
+    DBNavigator1: TDBNavigator;
+    FDQuery1: TFDQuery;
+    FDTransaction1: TFDTransaction;
+    FDQuery1Cod_Produto: TIntegerField;
+    FDQuery1Descricao: TWideStringField;
+    FDQuery1Valor: TBCDField;
+    FDQuery1Imposto: TBCDField;
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    DataSource1: TDataSource;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+    Label4: TLabel;
+    DBEdit4: TDBEdit;
+    BTNeditar: TBitBtn;
+    BTNsalvar: TBitBtn;
+    BTNexcluir: TBitBtn;
+    BTNnovo: TBitBtn;
+    BTNcancelar: TBitBtn;
+    BTNrelatorio: TBitBtn;
+    procedure FormShow(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    procedure nedicao;
+    procedure edicao;
+
+  end;
+
+var
+  FRMcadProduto: TFRMcadProduto;
+
+implementation
+
+{$R *.dfm}
+
+uses Umodulo;
+
+procedure TFRMcadProduto.edicao;
+begin
+BTNcancelar.Enabled:= false;
+BTNeditar.Enabled:= true;
+BTNexcluir.Enabled:= true;
+BTNnovo.Enabled:= true;
+BTNsalvar.Enabled:= false;
+end;
+
+procedure TFRMcadProduto.FormShow(Sender: TObject);
+begin
+edicao;
+end;
+
+procedure TFRMcadProduto.nedicao;
+begin
+BTNcancelar.Enabled:= true;
+BTNeditar.Enabled:= false;
+BTNexcluir.Enabled:= false;
+BTNnovo.Enabled:= false;
+BTNsalvar.Enabled:= true;
+end;
+
+end.

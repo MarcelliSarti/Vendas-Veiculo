@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<TfrxReport Version="5.1.5" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="4095" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" PrintOptions.PrintOnSheet="0" ReportOptions.CreateDate="43769,8924647685" ReportOptions.Description.Text="" ReportOptions.LastChange="43769,9023272222" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end.">
+  <Datasets>
+    <item DataSet="frxDBDatasetCadastro" DataSetName="frxDBDatasetCadastro"/>
+  </Datasets>
+  <TfrxDataPage Name="Data" Height="1000" Left="0" Top="0" Width="1000"/>
+  <TfrxReportPage Name="Page1" PaperWidth="210" PaperHeight="297" PaperSize="9" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" Frame.Typ="15" HGuides.Text="" VGuides.Text="">
+    <TfrxMasterData Name="MasterData1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Height="34,01577" Left="0" Top="185,19697" Width="718,1107" ColumnWidth="0" ColumnGap="0" DataSet="frxDBDatasetCadastro" DataSetName="frxDBDatasetCadastro" RowCount="0">
+      <TfrxMemoView Name="frxDBDatasetCadastroid" Left="3,77953" Top="7,55906" Width="83,14966" Height="18,89765" DataField="id" DataSet="frxDBDatasetCadastro" DataSetName="frxDBDatasetCadastro" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="15" ParentFont="False" Text="[frxDBDatasetCadastro.&#34;id&#34;]"/>
+      <TfrxMemoView Name="frxDBDatasetCadastronome" Left="98,26778" Top="7,55906" Width="83,14966" Height="18,89765" DataField="nome" DataSet="frxDBDatasetCadastro" DataSetName="frxDBDatasetCadastro" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="15" ParentFont="False" Text="[frxDBDatasetCadastro.&#34;nome&#34;]"/>
+      <TfrxMemoView Name="frxDBDatasetCadastrologin" Left="192,75603" Top="7,55906" Width="79,37013" Height="18,89765" DataField="login" DataSet="frxDBDatasetCadastro" DataSetName="frxDBDatasetCadastro" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="15" ParentFont="False" Text="[frxDBDatasetCadastro.&#34;login&#34;]"/>
+      <TfrxMemoView Name="frxDBDatasetCadastrosenha" Left="287,24428" Top="7,55906" Width="86,92919" Height="18,89765" DataField="senha" DataSet="frxDBDatasetCadastro" DataSetName="frxDBDatasetCadastro" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="15" ParentFont="False" Text="[frxDBDatasetCadastro.&#34;senha&#34;]"/>
+      <TfrxMemoView Name="frxDBDatasetCadastroemail" Left="389,29159" Top="7,55906" Width="185,19697" Height="18,89765" DataField="email" DataSet="frxDBDatasetCadastro" DataSetName="frxDBDatasetCadastro" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="15" ParentFont="False" Text="[frxDBDatasetCadastro.&#34;email&#34;]"/>
+      <TfrxMemoView Name="frxDBDatasetCadastroacesso" Left="589,60668" Top="7,55906" Width="113,3859" Height="18,89765" DataField="acesso" DataSet="frxDBDatasetCadastro" DataSetName="frxDBDatasetCadastro" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="15" ParentFont="False" Text="[frxDBDatasetCadastro.&#34;acesso&#34;]"/>
+    </TfrxMasterData>
+    <TfrxPageHeader Name="PageHeader1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Height="60,47248" Left="0" Top="18,89765" Width="718,1107">
+      <TfrxMemoView Name="Date" Left="612,28386" Top="3,77953" Width="79,37013" Height="18,89765" Text="[Date]"/>
+      <TfrxMemoView Name="Time" Left="612,28386" Top="30,23624" Width="79,37013" Height="18,89765" Text="[Time]"/>
+    </TfrxPageHeader>
+    <TfrxPageFooter Name="PageFooter1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Height="34,01577" Left="0" Top="279,68522" Width="718,1107">
+      <TfrxMemoView Name="Page" Left="619,84292" Top="3,77953" Width="79,37013" Height="18,89765" Text="[Page#]"/>
+    </TfrxPageFooter>
+    <TfrxHeader Name="Header1" FillType="ftBrush" FillGap.Top="0" FillGap.Left="0" FillGap.Bottom="0" FillGap.Right="0" Height="22,67718" Left="0" Top="139,84261" Width="718,1107">
+      <TfrxMemoView Name="Memo1" Left="3,77953" Top="0" Width="83,14966" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="15" Fill.BackColor="65535" ParentFont="False" Text="Id:"/>
+      <TfrxMemoView Name="Memo2" Left="98,26778" Top="0" Width="83,14966" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="15" Fill.BackColor="65535" ParentFont="False" Text="Nome:"/>
+      <TfrxMemoView Name="Memo3" Left="192,75603" Top="0" Width="79,37013" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="15" Fill.BackColor="65535" ParentFont="False" Text="Login:"/>
+      <TfrxMemoView Name="Memo4" Left="287,24428" Top="0" Width="86,92919" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="15" Fill.BackColor="65535" ParentFont="False" Text="Senha:"/>
+      <TfrxMemoView Name="Memo5" Left="389,29159" Top="0" Width="185,19697" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="15" Fill.BackColor="65535" ParentFont="False" Text="Email:"/>
+      <TfrxMemoView Name="Memo6" Left="589,60668" Top="0" Width="113,3859" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="15" Fill.BackColor="65535" ParentFont="False" Text="Email:"/>
+    </TfrxHeader>
+  </TfrxReportPage>
+  <TfrxReportPage Name="Page2" PaperWidth="210" PaperHeight="297" PaperSize="9" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text=""/>
+</TfrxReport>

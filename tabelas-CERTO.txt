@@ -1,0 +1,62 @@
+use BdVendas
+
+
+
+CREATE TABLE ItensInvest (
+CodInv int PRIMARY KEY identity (1,1),
+CodVeic int,
+CodInvest int
+)
+
+CREATE TABLE Investidor (
+Nome varchar(50),
+CodInvest int PRIMARY KEY identity (1,1),
+Sigla varchar(4),
+Telefone varchar(12)
+)
+
+CREATE TABLE Marca (
+NomeMarca varchar(25),
+CodMarca int PRIMARY KEY identity (1,1)
+)
+
+CREATE TABLE Vendedor (
+Email varchar(30),
+CodVend int PRIMARY KEY identity (1,1),
+Endereco varchar(45),
+NumCnh varchar(20),
+CEP varchar(9),
+Nome varchar(100),
+CPF varchar(14),
+RG varchar(14),
+DataNasc date,
+CodCidade int
+)
+
+CREATE TABLE Veiculo (
+ValorFipe numeric(18,2),
+CodVeic int PRIMARY KEY identity (1,1),
+Placa varchar(7),
+Modelo varchar(40),
+KM numeric(20,0),
+AnoModelo varchar(4),
+Cor varchar(10),
+ValorCompra numeric(18,2),
+Ano varchar(4),
+Valor_po_venda numeric(18,2),
+DataCompra int,
+CodMarca int,
+CodVend int,
+FOREIGN KEY(CodMarca) REFERENCES Marca (CodMarca),
+FOREIGN KEY(CodVend) REFERENCES Vendedor (CodVend)
+)
+
+CREATE TABLE Cidade (
+CodCidade int PRIMARY KEY identity (1,1),
+UF char(2),
+NomeCidade varchar(45)
+)
+
+ALTER TABLE ItensInvest ADD FOREIGN KEY(CodVeic) REFERENCES Veiculo (CodVeic)
+ALTER TABLE ItensInvest ADD FOREIGN KEY(CodInvest) REFERENCES Investidor (CodInvest)
+ALTER TABLE Vendedor ADD FOREIGN KEY(CodCidade) REFERENCES Cidade (CodCidade)

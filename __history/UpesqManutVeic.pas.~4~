@@ -1,0 +1,70 @@
+unit UpesqManutVeic;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, Vcl.Grids, Vcl.DBGrids,
+  Vcl.StdCtrls, Vcl.Buttons, Vcl.ExtCtrls, Vcl.DBCtrls;
+
+type
+  TFRMpesqManutVeic = class(TForm)
+    DBNavigator1: TDBNavigator;
+    Label1: TLabel;
+    BTNpesquisa: TSpeedButton;
+    EDTpesquisa: TEdit;
+    DBGrid1: TDBGrid;
+    qrypesquisa: TFDQuery;
+    qrypesquisaCodVeic: TFDAutoIncField;
+    qrypesquisaPlaca: TStringField;
+    qrypesquisaModelo: TStringField;
+    qrypesquisaCor: TStringField;
+    dspesquisa: TDataSource;
+    procedure EDTpesquisaChange(Sender: TObject);
+    procedure BTNpesquisaClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FRMpesqManutVeic: TFRMpesqManutVeic;
+
+implementation
+
+{$R *.dfm}
+
+uses Umodulo, UmanutVeic;
+
+procedure TFRMpesqManutVeic.BTNpesquisaClick(Sender: TObject);
+begin
+FRMmanutVeic.FDQuery1.FieldValues['codVeic']:= QryPesquisa.FieldValues['codveic'];
+FRMmanutVeic.EdtModelo.Text := QryPesquisa.FieldValues['modelo'];
+close;
+end;
+
+procedure TFRMpesqManutVeic.EDTpesquisaChange(Sender: TObject);
+begin
+if EDTpesquisa.text <> ' ' then
+Begin
+  QryPesquisa.SQL.Clear;
+  QryPesquisa.Close;
+  QryPesquisa.SQL.Add('select * from veiculo');
+  QryPesquisa.SQL.Add('where modelo like' + QuotedStr('%' + EDTpesquisa.Text+'%'));
+  QryPesquisa.Open;
+  end
+  else
+  begin
+  QryPesquisa.SQL.Clear;
+  QryPesquisa.Close;
+  QryPesquisa.SQL.Add('select * from veiculo');
+  QryPesquisa.Open;
+End;
+
+end;
+
+end.

@@ -1,0 +1,68 @@
+unit UcadVendedor;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB, Vcl.ExtCtrls,
+  Vcl.DBCtrls, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons, Vcl.Mask,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+
+type
+  TFRMcadVendedor = class(TForm)
+    FDTransactionVendedor: TFDTransaction;
+    FDQueryVendedor: TFDQuery;
+    FDQueryVendedorEmail: TStringField;
+    FDQueryVendedorCodVend: TFDAutoIncField;
+    FDQueryVendedorEndereco: TStringField;
+    FDQueryVendedorNumCnh: TStringField;
+    FDQueryVendedorCEP: TStringField;
+    FDQueryVendedorNome: TStringField;
+    FDQueryVendedorCPF: TStringField;
+    FDQueryVendedorRG: TStringField;
+    FDQueryVendedorDataNasc: TDateField;
+    FDQueryVendedorCodCidade: TIntegerField;
+    Label1: TLabel;
+    DBEdit1: TDBEdit;
+    DataSource1: TDataSource;
+    Label2: TLabel;
+    DBEdit2: TDBEdit;
+    Label3: TLabel;
+    DBEdit3: TDBEdit;
+    Label4: TLabel;
+    DBEdit4: TDBEdit;
+    Label5: TLabel;
+    DBEdit5: TDBEdit;
+    Label6: TLabel;
+    DBEdit6: TDBEdit;
+    Label7: TLabel;
+    DBEdit7: TDBEdit;
+    Label8: TLabel;
+    DBEdit8: TDBEdit;
+    Label9: TLabel;
+    DBEdit9: TDBEdit;
+    Label10: TLabel;
+    DBEdit10: TDBEdit;
+    Label11: TLabel;
+    Edit1: TEdit;
+    BTNpesquisaCidade: TBitBtn;
+    DBGrid1: TDBGrid;
+    DBNavigator1: TDBNavigator;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FRMcadVendedor: TFRMcadVendedor;
+
+implementation
+
+{$R *.dfm}
+
+uses Umodulo;
+
+end.

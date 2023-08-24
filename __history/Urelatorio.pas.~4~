@@ -1,0 +1,32 @@
+unit Urelatorio;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, frxClass, frxDBSet;
+
+type
+  TFRMrelatorios = class(TForm)
+    frxReportCidade: TfrxReport;
+    frxDBDataset1: TfrxDBDataset;
+    frxReportMarca: TfrxReport;
+    frxDBDataset2: TfrxDBDataset;
+    frxReportInest: TfrxReport;
+    frxDBDataset3: TfrxDBDataset;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FRMrelatorios: TFRMrelatorios;
+
+implementation
+
+{$R *.dfm}
+
+uses Ucidade, Umarca, UcadINvestidor;
+
+end.

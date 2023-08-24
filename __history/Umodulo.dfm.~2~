@@ -1,0 +1,21 @@
+object DataModule1: TDataModule1
+  OldCreateOrder = False
+  Height = 150
+  Width = 215
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=BdVendas'
+      'Server=F08\SQLEXPRESS'
+      'OSAuthent=Yes'
+      'DriverID=MSSQL')
+    Connected = True
+    LoginPrompt = False
+    Left = 40
+    Top = 40
+  end
+  object FDTransaction1: TFDTransaction
+    Connection = FDConnection1
+    Left = 144
+    Top = 48
+  end
+end

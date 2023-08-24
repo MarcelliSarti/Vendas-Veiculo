@@ -1,0 +1,66 @@
+unit UpesquisaProdutoManutencao;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.ExtCtrls, Vcl.DBCtrls,
+  Vcl.Grids, Vcl.DBGrids, Vcl.Buttons, Vcl.StdCtrls, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS,
+  FireDAC.Phys.Intf, FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+
+type
+  TFRMpesquisaProdutoManutencao = class(TForm)
+    Label1: TLabel;
+    EDTpesquisa: TEdit;
+    BTNPesquisa: TSpeedButton;
+    DBGrid1: TDBGrid;
+    DBNavigator1: TDBNavigator;
+    QryPesquisa: TFDQuery;
+    dspesquisa: TDataSource;
+    procedure EDTpesquisaChange(Sender: TObject);
+    procedure BTNPesquisaClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FRMpesquisaProdutoManutencao: TFRMpesquisaProdutoManutencao;
+
+implementation
+
+{$R *.dfm}
+
+uses Umodulo, UmanutVeic;
+
+procedure TFRMpesquisaProdutoManutencao.BTNPesquisaClick(Sender: TObject);
+begin
+FRMmanutVeic.EdtProd_serv.Text:= QryPesquisa.FieldValues['Cod_produto'];
+FRMmanutVeic.EDTdesc.Text:= QryPesquisa.FieldValues['descricao'];
+close;
+end;
+
+procedure TFRMpesquisaProdutoManutencao.EDTpesquisaChange(Sender: TObject);
+begin
+if EDTpesquisa.Text <> ' ' then
+begin
+  QryPesquisa.SQL.Clear;
+  QryPesquisa.Close;
+  QryPesquisa.SQL.Add('select * from produto_to_serv');
+  QryPesquisa.SQL.Add('where descricao like' + quotedstr ('%' + EDTpesquisa.Text +'%'));
+  QryPesquisa.Open;
+  end
+  else
+  begin
+  QryPesquisa.SQL.Clear;
+  QryPesquisa.Close;
+  QryPesquisa.SQL.Add('select * from produto_to_serv');
+  QryPesquisa.Open;
+end;
+
+end;
+
+end.

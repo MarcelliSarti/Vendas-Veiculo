@@ -1,0 +1,25 @@
+object FRMmarca: TFRMmarca
+  Left = 0
+  Top = 0
+  Caption = 'Cadastro de Marcas'
+  ClientHeight = 464
+  ClientWidth = 912
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object DBNavigator1: TDBNavigator
+    Left = 0
+    Top = 424
+    Width = 912
+    Height = 40
+    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+    Align = alBottom
+    TabOrder = 0
+  end
+end

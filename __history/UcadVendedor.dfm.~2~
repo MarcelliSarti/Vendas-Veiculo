@@ -1,0 +1,430 @@
+object FRMcadVendedor: TFRMcadVendedor
+  Left = 0
+  Top = 0
+  Caption = 'Cadastro de Vendedores'
+  ClientHeight = 640
+  ClientWidth = 928
+  Color = clBtnFace
+  Font.Charset = ANSI_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -19
+  Font.Name = 'Microsoft New Tai Lue'
+  Font.Style = [fsBold]
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 25
+  object Label1: TLabel
+    Left = 24
+    Top = 8
+    Width = 164
+    Height = 25
+    Caption = 'C'#243'digo Vendedor:'
+    FocusControl = DBEdit1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Microsoft New Tai Lue'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 24
+    Top = 78
+    Width = 59
+    Height = 25
+    Caption = 'Nome:'
+    FocusControl = DBEdit2
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Microsoft New Tai Lue'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 24
+    Top = 140
+    Width = 126
+    Height = 25
+    Caption = 'N'#250'mero CNH:'
+    FocusControl = DBEdit3
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Microsoft New Tai Lue'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 180
+    Top = 140
+    Width = 39
+    Height = 25
+    Caption = 'CPF:'
+    FocusControl = DBEdit4
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Microsoft New Tai Lue'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 384
+    Top = 138
+    Width = 31
+    Height = 25
+    Caption = 'RG:'
+    FocusControl = DBEdit5
+  end
+  object Label6: TLabel
+    Left = 24
+    Top = 208
+    Width = 83
+    Height = 25
+    Caption = 'DataNasc'
+    FocusControl = DBEdit6
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Microsoft New Tai Lue'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 180
+    Top = 208
+    Width = 39
+    Height = 25
+    Caption = 'CEP:'
+    FocusControl = DBEdit7
+  end
+  object Label8: TLabel
+    Left = 24
+    Top = 350
+    Width = 88
+    Height = 25
+    Caption = 'Endere'#231'o:'
+    FocusControl = DBEdit8
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Microsoft New Tai Lue'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label9: TLabel
+    Left = 24
+    Top = 280
+    Width = 136
+    Height = 25
+    Caption = 'C'#243'digo Cidade:'
+    FocusControl = DBEdit9
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Microsoft New Tai Lue'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 24
+    Top = 416
+    Width = 47
+    Height = 25
+    Caption = 'Email'
+    FocusControl = DBEdit10
+  end
+  object Label11: TLabel
+    Left = 183
+    Top = 280
+    Width = 125
+    Height = 25
+    Caption = 'Nome Cidade:'
+    FocusControl = DBEdit9
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Microsoft New Tai Lue'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object DBEdit1: TDBEdit
+    Left = 24
+    Top = 39
+    Width = 164
+    Height = 33
+    DataField = 'CodVend'
+    DataSource = DataSource1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Microsoft New Tai Lue'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+  end
+  object DBEdit2: TDBEdit
+    Left = 24
+    Top = 101
+    Width = 537
+    Height = 33
+    DataField = 'Nome'
+    DataSource = DataSource1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Microsoft New Tai Lue'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+  end
+  object DBEdit3: TDBEdit
+    Left = 24
+    Top = 169
+    Width = 134
+    Height = 33
+    DataField = 'NumCnh'
+    DataSource = DataSource1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Microsoft New Tai Lue'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+  end
+  object DBEdit4: TDBEdit
+    Left = 180
+    Top = 169
+    Width = 186
+    Height = 33
+    DataField = 'CPF'
+    DataSource = DataSource1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Microsoft New Tai Lue'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+  end
+  object DBEdit5: TDBEdit
+    Left = 384
+    Top = 169
+    Width = 186
+    Height = 33
+    DataField = 'RG'
+    DataSource = DataSource1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Microsoft New Tai Lue'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+  end
+  object DBEdit6: TDBEdit
+    Left = 24
+    Top = 239
+    Width = 134
+    Height = 33
+    DataField = 'DataNasc'
+    DataSource = DataSource1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Microsoft New Tai Lue'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 5
+  end
+  object DBEdit7: TDBEdit
+    Left = 180
+    Top = 239
+    Width = 121
+    Height = 33
+    DataField = 'CEP'
+    DataSource = DataSource1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Microsoft New Tai Lue'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 6
+  end
+  object DBEdit8: TDBEdit
+    Left = 24
+    Top = 377
+    Width = 589
+    Height = 33
+    DataField = 'Endereco'
+    DataSource = DataSource1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Microsoft New Tai Lue'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 7
+  end
+  object DBEdit9: TDBEdit
+    Left = 24
+    Top = 311
+    Width = 136
+    Height = 33
+    DataField = 'CodCidade'
+    DataSource = DataSource1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Microsoft New Tai Lue'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 8
+  end
+  object DBEdit10: TDBEdit
+    Left = 24
+    Top = 441
+    Width = 394
+    Height = 33
+    DataField = 'Email'
+    DataSource = DataSource1
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Microsoft New Tai Lue'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 9
+  end
+  object Edit1: TEdit
+    Left = 183
+    Top = 311
+    Width = 133
+    Height = 33
+    TabOrder = 10
+  end
+  object BTNpesquisaCidade: TBitBtn
+    Left = 329
+    Top = 311
+    Width = 37
+    Height = 33
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000130B0000130B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+      33033333333333333F7F3333333333333000333333333333F777333333333333
+      000333333333333F777333333333333000333333333333F77733333333333300
+      033333333FFF3F777333333700073B703333333F7773F77733333307777700B3
+      33333377333777733333307F8F8F7033333337F333F337F3333377F8F9F8F773
+      3333373337F3373F3333078F898F870333337F33F7FFF37F333307F99999F703
+      33337F377777337F3333078F898F8703333373F337F33373333377F8F9F8F773
+      333337F3373337F33333307F8F8F70333333373FF333F7333333330777770333
+      333333773FF77333333333370007333333333333777333333333}
+    NumGlyphs = 2
+    TabOrder = 11
+  end
+  object DBGrid1: TDBGrid
+    Left = 24
+    Top = 480
+    Width = 896
+    Height = 120
+    DataSource = DataSource1
+    TabOrder = 12
+    TitleFont.Charset = ANSI_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -19
+    TitleFont.Name = 'Microsoft New Tai Lue'
+    TitleFont.Style = [fsBold]
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 0
+    Top = 606
+    Width = 928
+    Height = 34
+    DataSource = DataSource1
+    VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbRefresh]
+    Align = alBottom
+    TabOrder = 13
+  end
+  object FDTransactionVendedor: TFDTransaction
+    Connection = DataModule1.FDConnection1
+    Left = 248
+    Top = 24
+  end
+  object FDQueryVendedor: TFDQuery
+    Active = True
+    Connection = DataModule1.FDConnection1
+    Transaction = FDTransactionVendedor
+    SQL.Strings = (
+      'select * from Vendedor')
+    Left = 360
+    Top = 24
+    object FDQueryVendedorCodVend: TFDAutoIncField
+      DisplayWidth = 8
+      FieldName = 'CodVend'
+      Origin = 'CodVend'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object FDQueryVendedorNome: TStringField
+      DisplayWidth = 92
+      FieldName = 'Nome'
+      Origin = 'Nome'
+      Size = 100
+    end
+    object FDQueryVendedorNumCnh: TStringField
+      DisplayWidth = 18
+      FieldName = 'NumCnh'
+      Origin = 'NumCnh'
+    end
+    object FDQueryVendedorCPF: TStringField
+      DisplayWidth = 13
+      FieldName = 'CPF'
+      Origin = 'CPF'
+      Size = 14
+    end
+    object FDQueryVendedorRG: TStringField
+      DisplayWidth = 13
+      FieldName = 'RG'
+      Origin = 'RG'
+      Size = 14
+    end
+    object FDQueryVendedorDataNasc: TDateField
+      DisplayWidth = 9
+      FieldName = 'DataNasc'
+      Origin = 'DataNasc'
+    end
+    object FDQueryVendedorCEP: TStringField
+      DisplayWidth = 8
+      FieldName = 'CEP'
+      Origin = 'CEP'
+      Size = 9
+    end
+    object FDQueryVendedorEndereco: TStringField
+      DisplayWidth = 41
+      FieldName = 'Endereco'
+      Origin = 'Endereco'
+      Size = 45
+    end
+    object FDQueryVendedorCodCidade: TIntegerField
+      DisplayWidth = 9
+      FieldName = 'CodCidade'
+      Origin = 'CodCidade'
+    end
+    object FDQueryVendedorEmail: TStringField
+      DisplayWidth = 28
+      FieldName = 'Email'
+      Origin = 'Email'
+      Size = 30
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = FDQueryVendedor
+    Left = 448
+    Top = 24
+  end
+end
