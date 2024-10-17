@@ -10,8 +10,6 @@ object FRMpesquisaVeiculo: TFRMpesquisaVeiculo
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -77,11 +75,10 @@ object FRMpesquisaVeiculo: TFRMpesquisaVeiculo
     VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbRefresh]
     Align = alBottom
     TabOrder = 2
-    ExplicitTop = 359
-    ExplicitWidth = 488
+    ExplicitTop = 531
+    ExplicitWidth = 920
   end
   object qryPesquisa: TFDQuery
-    Active = True
     Connection = DataModule1.FDConnection1
     SQL.Strings = (
       'select * from Veiculo')

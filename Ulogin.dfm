@@ -115,8 +115,8 @@ object form1: Tform1
     OnChange = EDTloginChange
   end
   object edtSenha: TEdit
-    Left = 126
-    Top = 113
+    Left = 122
+    Top = 119
     Width = 353
     Height = 21
     PasswordChar = '*'
@@ -174,7 +174,7 @@ object form1: Tform1
   end
   object DataSource1: TDataSource
     DataSet = FDQuery1
-    Left = 456
+    Left = 432
     Top = 216
   end
 end

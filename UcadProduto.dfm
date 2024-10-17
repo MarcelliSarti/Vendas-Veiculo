@@ -10,9 +10,7 @@ object FRMcadProduto: TFRMcadProduto
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 14
@@ -79,6 +77,8 @@ object FRMcadProduto: TFRMcadProduto
     VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbRefresh]
     Align = alBottom
     TabOrder = 0
+    ExplicitTop = 430
+    ExplicitWidth = 720
   end
   object DBEdit1: TDBEdit
     Left = 170
@@ -333,7 +333,6 @@ object FRMcadProduto: TFRMcadProduto
     OnClick = BitBtn1Click
   end
   object FDQueryproduto: TFDQuery
-    Active = True
     Connection = DataModule1.FDConnection1
     Transaction = FDTransaction1
     SQL.Strings = (

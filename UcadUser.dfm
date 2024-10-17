@@ -10,9 +10,7 @@
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Permissões: TGroupBox
     Left = 16
@@ -149,7 +147,7 @@
       Top = 37
       Width = 52
       Height = 33
-      DataField = 'id'
+      DataField = 'login'
       DataSource = DataSource1
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
@@ -463,7 +461,6 @@
     Top = 8
   end
   object FDQueryCad: TFDQuery
-    Active = True
     Connection = DataModule1.FDConnection1
     Transaction = FDTransaction1
     SQL.Strings = (
@@ -522,7 +519,7 @@
     Top = 8
   end
   object frxReport1: TfrxReport
-    Version = '5.1.5'
+    Version = '2023.2.4'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -540,8 +537,6 @@
     Top = 8
     Datasets = <
       item
-        DataSet = frxDBDatasetCadastro
-        DataSetName = 'frxDBDatasetCadastro'
       end>
     Variables = <>
     Style = <>
@@ -558,22 +553,25 @@
       TopMargin = 10.000000000000000000
       BottomMargin = 10.000000000000000000
       Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+      MirrorMode = []
       object MasterData1: TfrxMasterData
         FillType = ftBrush
+        FillGap.Top = 0
+        FillGap.Left = 0
+        FillGap.Bottom = 0
+        FillGap.Right = 0
+        Frame.Typ = []
         Height = 34.015770000000000000
         Top = 185.196970000000000000
         Width = 718.110700000000000000
-        DataSet = frxDBDatasetCadastro
-        DataSetName = 'frxDBDatasetCadastro'
         RowCount = 0
         object frxDBDatasetCadastroid: TfrxMemoView
+          AllowVectorExport = True
           Left = 3.779530000000000000
           Top = 7.559060000000000000
           Width = 83.149660000000000000
           Height = 18.897650000000000000
           DataField = 'id'
-          DataSet = frxDBDatasetCadastro
-          DataSetName = 'frxDBDatasetCadastro'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
@@ -585,13 +583,12 @@
           ParentFont = False
         end
         object frxDBDatasetCadastronome: TfrxMemoView
+          AllowVectorExport = True
           Left = 98.267780000000000000
           Top = 7.559060000000000000
           Width = 83.149660000000000000
           Height = 18.897650000000000000
           DataField = 'nome'
-          DataSet = frxDBDatasetCadastro
-          DataSetName = 'frxDBDatasetCadastro'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
@@ -603,13 +600,12 @@
           ParentFont = False
         end
         object frxDBDatasetCadastrologin: TfrxMemoView
+          AllowVectorExport = True
           Left = 192.756030000000000000
           Top = 7.559060000000000000
           Width = 79.370130000000000000
           Height = 18.897650000000000000
           DataField = 'login'
-          DataSet = frxDBDatasetCadastro
-          DataSetName = 'frxDBDatasetCadastro'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
@@ -621,13 +617,12 @@
           ParentFont = False
         end
         object frxDBDatasetCadastrosenha: TfrxMemoView
+          AllowVectorExport = True
           Left = 287.244280000000000000
           Top = 7.559060000000000000
           Width = 86.929190000000000000
           Height = 18.897650000000000000
           DataField = 'senha'
-          DataSet = frxDBDatasetCadastro
-          DataSetName = 'frxDBDatasetCadastro'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
@@ -639,13 +634,12 @@
           ParentFont = False
         end
         object frxDBDatasetCadastroemail: TfrxMemoView
+          AllowVectorExport = True
           Left = 389.291590000000000000
           Top = 7.559060000000000000
           Width = 185.196970000000000000
           Height = 18.897650000000000000
           DataField = 'email'
-          DataSet = frxDBDatasetCadastro
-          DataSetName = 'frxDBDatasetCadastro'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
@@ -657,13 +651,12 @@
           ParentFont = False
         end
         object frxDBDatasetCadastroacesso: TfrxMemoView
+          AllowVectorExport = True
           Left = 589.606680000000000000
           Top = 7.559060000000000000
           Width = 113.385900000000000000
           Height = 18.897650000000000000
           DataField = 'acesso'
-          DataSet = frxDBDatasetCadastro
-          DataSetName = 'frxDBDatasetCadastro'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlack
           Font.Height = -13
@@ -677,46 +670,68 @@
       end
       object PageHeader1: TfrxPageHeader
         FillType = ftBrush
+        FillGap.Top = 0
+        FillGap.Left = 0
+        FillGap.Bottom = 0
+        FillGap.Right = 0
+        Frame.Typ = []
         Height = 60.472480000000000000
         Top = 18.897650000000000000
         Width = 718.110700000000000000
         object Date: TfrxMemoView
+          AllowVectorExport = True
           Left = 612.283860000000000000
           Top = 3.779530000000000000
           Width = 79.370130000000000000
           Height = 18.897650000000000000
+          Frame.Typ = []
           Memo.UTF8W = (
             '[Date]')
         end
         object Time: TfrxMemoView
+          AllowVectorExport = True
           Left = 612.283860000000000000
           Top = 30.236240000000000000
           Width = 79.370130000000000000
           Height = 18.897650000000000000
+          Frame.Typ = []
           Memo.UTF8W = (
             '[Time]')
         end
       end
       object PageFooter1: TfrxPageFooter
         FillType = ftBrush
+        FillGap.Top = 0
+        FillGap.Left = 0
+        FillGap.Bottom = 0
+        FillGap.Right = 0
+        Frame.Typ = []
         Height = 34.015770000000000000
         Top = 279.685220000000000000
         Width = 718.110700000000000000
         object Page: TfrxMemoView
+          AllowVectorExport = True
           Left = 619.842920000000000000
           Top = 3.779530000000000000
           Width = 79.370130000000000000
           Height = 18.897650000000000000
+          Frame.Typ = []
           Memo.UTF8W = (
             '[Page#]')
         end
       end
       object Header1: TfrxHeader
         FillType = ftBrush
+        FillGap.Top = 0
+        FillGap.Left = 0
+        FillGap.Bottom = 0
+        FillGap.Right = 0
+        Frame.Typ = []
         Height = 22.677180000000000000
         Top = 139.842610000000000000
         Width = 718.110700000000000000
         object Memo1: TfrxMemoView
+          AllowVectorExport = True
           Left = 3.779530000000000000
           Width = 83.149660000000000000
           Height = 18.897650000000000000
@@ -732,6 +747,7 @@
           ParentFont = False
         end
         object Memo2: TfrxMemoView
+          AllowVectorExport = True
           Left = 98.267780000000000000
           Width = 83.149660000000000000
           Height = 18.897650000000000000
@@ -747,6 +763,7 @@
           ParentFont = False
         end
         object Memo3: TfrxMemoView
+          AllowVectorExport = True
           Left = 192.756030000000000000
           Width = 79.370130000000000000
           Height = 18.897650000000000000
@@ -762,6 +779,7 @@
           ParentFont = False
         end
         object Memo4: TfrxMemoView
+          AllowVectorExport = True
           Left = 287.244280000000000000
           Width = 86.929190000000000000
           Height = 18.897650000000000000
@@ -777,6 +795,7 @@
           ParentFont = False
         end
         object Memo5: TfrxMemoView
+          AllowVectorExport = True
           Left = 389.291590000000000000
           Width = 185.196970000000000000
           Height = 18.897650000000000000
@@ -792,6 +811,7 @@
           ParentFont = False
         end
         object Memo6: TfrxMemoView
+          AllowVectorExport = True
           Left = 589.606680000000000000
           Width = 113.385900000000000000
           Height = 18.897650000000000000
@@ -816,14 +836,8 @@
       RightMargin = 10.000000000000000000
       TopMargin = 10.000000000000000000
       BottomMargin = 10.000000000000000000
+      Frame.Typ = []
+      MirrorMode = []
     end
-  end
-  object frxDBDatasetCadastro: TfrxDBDataset
-    UserName = 'frxDBDatasetCadastro'
-    CloseDataSource = False
-    DataSet = FDQueryCad
-    BCDToCurrency = False
-    Left = 648
-    Top = 8
   end
 end

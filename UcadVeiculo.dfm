@@ -10,9 +10,7 @@ object FRMcadVeiculo: TFRMcadVeiculo
   Font.Height = -19
   Font.Name = 'Microsoft New Tai Lue'
   Font.Style = [fsBold]
-  OldCreateOrder = False
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 25
   object Label1: TLabel
     Left = 16
@@ -297,6 +295,8 @@ object FRMcadVeiculo: TFRMcadVeiculo
     VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbRefresh]
     Align = alBottom
     TabOrder = 15
+    ExplicitTop = 593
+    ExplicitWidth = 743
   end
   object Edit2: TEdit
     Left = 364
@@ -585,7 +585,6 @@ object FRMcadVeiculo: TFRMcadVeiculo
     OnClick = BitBtn1Click
   end
   object FDQueryVeiculo: TFDQuery
-    Active = True
     Connection = DataModule1.FDConnection1
     Transaction = FDTransactionVeiculo
     SQL.Strings = (
@@ -684,7 +683,6 @@ object FRMcadVeiculo: TFRMcadVeiculo
     Top = 160
   end
   object qryItem: TFDQuery
-    Active = True
     IndexFieldNames = 'CodVeic'
     MasterSource = DataSource1
     MasterFields = 'CodVeic'

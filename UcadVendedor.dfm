@@ -10,8 +10,6 @@ object FRMcadVendedor: TFRMcadVendedor
   Font.Height = -19
   Font.Name = 'Microsoft New Tai Lue'
   Font.Style = [fsBold]
-  OldCreateOrder = False
-  PixelsPerInch = 96
   TextHeight = 25
   object Label1: TLabel
     Left = 24
@@ -337,6 +335,8 @@ object FRMcadVendedor: TFRMcadVendedor
     VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbRefresh]
     Align = alBottom
     TabOrder = 12
+    ExplicitTop = 597
+    ExplicitWidth = 572
   end
   object DBGrid1: TDBGrid
     Left = 24
@@ -518,7 +518,6 @@ object FRMcadVendedor: TFRMcadVendedor
     Top = 24
   end
   object FDQueryVendedor: TFDQuery
-    Active = True
     Connection = DataModule1.FDConnection1
     Transaction = FDTransactionVendedor
     SQL.Strings = (

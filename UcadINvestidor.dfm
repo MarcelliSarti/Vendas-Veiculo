@@ -10,9 +10,7 @@ object FRMcadInvestidor: TFRMcadInvestidor
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 16
@@ -115,6 +113,8 @@ object FRMcadInvestidor: TFRMcadInvestidor
     VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbRefresh]
     Align = alBottom
     TabOrder = 4
+    ExplicitTop = 455
+    ExplicitWidth = 708
   end
   object DBGrid1: TDBGrid
     Left = 19
@@ -333,7 +333,6 @@ object FRMcadInvestidor: TFRMcadInvestidor
     OnClick = BTNrelatClick
   end
   object FDQueryInvest: TFDQuery
-    Active = True
     Connection = DataModule1.FDConnection1
     Transaction = FDTransactionInvest
     SQL.Strings = (

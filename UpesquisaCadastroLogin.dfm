@@ -10,8 +10,6 @@ object FRMpesquisaLogin: TFRMpesquisaLogin
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 24
@@ -77,9 +75,10 @@ object FRMpesquisaLogin: TFRMpesquisaLogin
     VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbRefresh]
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 365
+    ExplicitWidth = 580
   end
   object qryPesquisa: TFDQuery
-    Active = True
     Connection = DataModule1.FDConnection1
     SQL.Strings = (
       'select * from login')

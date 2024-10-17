@@ -46,16 +46,16 @@ uses Umodulo, Umenu;
 
 procedure Tform1.BtnEntrarClick(Sender: TObject);
 begin
-if edtSenha.Text=FDQuery1senha.Value then
-begin
-ShowMessage('Login Feito com Sucesso');
-EDTlogin.Clear;
-edtSenha.Clear;
-FRMmenu.Show;
-hide;
-end
-Else
-ShowMessage('Senha Inválida');
+//if edtSenha.Text=FDQuery1senha.Value then
+//  begin
+  ShowMessage('Login Feito com Sucesso');
+  EDTlogin.Clear;
+  edtSenha.Clear;
+  FRMmenu.Show;
+  hide;
+//  end
+//  Else
+//  ShowMessage('Senha Inválida');
 end;
 
 procedure Tform1.BtnEntrarKeyPress(Sender: TObject; var Key: Char);

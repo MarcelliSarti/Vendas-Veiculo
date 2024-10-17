@@ -10,9 +10,7 @@ object FRMCidade: TFRMCidade
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
     Left = 8
@@ -64,6 +62,8 @@ object FRMCidade: TFRMCidade
     VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbRefresh]
     Align = alBottom
     TabOrder = 0
+    ExplicitTop = 407
+    ExplicitWidth = 795
   end
   object DBEdit1: TDBEdit
     Left = 8
@@ -338,7 +338,6 @@ object FRMCidade: TFRMCidade
     OnClick = BTNrelatClick
   end
   object FDQueryCidade: TFDQuery
-    Active = True
     Connection = DataModule1.FDConnection1
     Transaction = FDTransactionCidade
     SQL.Strings = (

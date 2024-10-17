@@ -8,7 +8,8 @@ uses
   FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
   FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB, Vcl.Grids,
   Vcl.DBGrids, Vcl.StdCtrls, Vcl.Buttons, Vcl.DBCtrls, Vcl.Mask,
-  FireDAC.Comp.DataSet, FireDAC.Comp.Client, frxClass, frxDBSet;
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, frxClass, frxDBSet, frCoreClasses,
+  Vcl.ExtCtrls;
 
 type
   TFRMcadUser = class(TForm)
@@ -47,7 +48,6 @@ type
     GroupBox1: TGroupBox;
     EDTpesquisa: TBitBtn;
     frxReport1: TfrxReport;
-    frxDBDatasetCadastro: TfrxDBDataset;
     procedure BtnNovoClick(Sender: TObject);
     procedure BtnEditClick(Sender: TObject);
     procedure BtnCancelarClick(Sender: TObject);

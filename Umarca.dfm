@@ -12,10 +12,8 @@ object FRMmarca: TFRMmarca
   Font.Height = -19
   Font.Name = 'Microsoft New Tai Lue'
   Font.Style = [fsBold]
-  OldCreateOrder = False
   Position = poDesigned
   OnShow = FormShow
-  PixelsPerInch = 96
   TextHeight = 25
   object Label1: TLabel
     Left = 168
@@ -41,6 +39,8 @@ object FRMmarca: TFRMmarca
     VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbRefresh]
     Align = alBottom
     TabOrder = 0
+    ExplicitTop = 383
+    ExplicitWidth = 640
   end
   object BTNcancelar: TBitBtn
     Left = 515
@@ -240,7 +240,6 @@ object FRMmarca: TFRMmarca
     Top = 16
   end
   object FDQueryMarca: TFDQuery
-    Active = True
     Connection = DataModule1.FDConnection1
     Transaction = FDTransactionMarca
     SQL.Strings = (
